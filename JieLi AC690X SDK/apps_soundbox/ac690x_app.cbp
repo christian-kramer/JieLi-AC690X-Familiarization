@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+    <FileVersion major="1" minor="6" />
+    <Project>
+        <Option title="SOUNDBOX" />
+        <Option pch_mode="2" />
+        <Option compiler="pi32_lto_compiler" />
+        <Build>
+            <Target title="Debug">
+                <Option output="download/ac690x/post_build/ac690x.or32" prefix_auto="0" extension_auto="0" />
+                <Option object_output="obj/Debug/" />
+                <Option type="1" />
+                <Option compiler="pi32_lto_compiler" />
+                <Compiler>
+                    <Add option="-Wall" />
+                    <Add option="-Wno-unused-function" />
+                    <Add option="-Wno-unused-const-variable" />
+                    <Add option="-DNOFLOAT" />
+                    <Add option="-DHAVE_MALLOC" />
+                    <Add directory="../include_lib" />
+                    <Add directory="../include_lib/cpu" />
+                    <Add directory="../include_lib/cpu/ac690x" />
+                    <Add directory="include/bluetooth" />
+                    <Add directory="include/echo" />
+                    <Add directory="include/fm" />
+                    <Add directory="include/idle" />
+                    <Add directory="include/linein" />
+                    <Add directory="include/main" />
+                    <Add directory="include/music" />
+                    <Add directory="include/record" />
+                    <Add directory="include/rtc" />
+                    <Add directory="include/usb_device" />
+                    <Add directory="include/fm/bk1080" />
+                    <Add directory="include/fm/fm_inside" />
+                    <Add directory="include/fm/qn8035" />
+                    <Add directory="include/fm/rda5807" />
+                    <Add directory="include" />
+                    <Add directory="include/common" />
+                    <Add directory="include/cpu" />
+                    <Add directory="include/cpu/ac690x" />
+                    <Add directory="include/cpu/ac690x/os_api" />
+                    <Add directory="include/cpu/ac690x/dac" />
+                    <Add directory="include/cpu/ac690x/play_sel" />
+                    <Add directory="include/cpu/ac690x/rcsp" />
+                    <Add directory="include/cpu/ac690x/ui" />
+                    <Add directory="include/cpu/ac690x/vm" />
+                    <Add directory="include/cpu/ac690x/ui/lcd" />
+                    <Add directory="include/cpu/ac690x/ui/led" />
+                </Compiler>
+                <Linker>
+                    <Add option="--output-version-info download/ac690x/post_build/ver.bin" />
+                    <Add option="-T./download/ac690x/post_build/ram.ld" />
+                    <Add option="-M=./download/ac690x/post_build/map.txt" />
+                    <Add option="--start-group ../include_lib/rtos_lib.a ../include_lib/mem_lib.a --end-group" />
+                    <Add option="-whole-archive ../include_lib/bluetooth_lib.a -no-whole-archive" />
+                    <Add option="../include_lib/dac_lib.a" />
+                    <Add option="../include_lib/aec_lib.a" />
+                    <Add option="../include_lib/dec_lib.a" />
+                    <Add option="../include_lib/dev_manage_lib.a" />
+                    <Add option="../include_lib/fat_lib.a" />
+                    <Add option="../include_lib/sydf_lib.a" />
+                    <Add option="../include_lib/rtos_lib.a" />
+                    <Add option="../include_lib/mem_lib.a" />
+                    <Add option="../include_lib/vm_lib.a" />
+                    <Add option="../include_lib/usb_lib.a" />
+                    <Add option="../include_lib/sdmmc_lib.a" />
+                    <Add option="../include_lib/cbuf_lib.a" />
+                    <Add option="../include_lib/encode_lib.a" />
+                    <Add option="../include_lib/rtc_lib.a" />
+                    <Add option="../include_lib/echo_lib.a" />
+                    <Add option="../include_lib/bluetooth_lib.a" />
+                    <Add option="../include_lib/periphy_lib.a" />
+                    <Add option="--start-group" />
+                    <Add option="../include_lib/bluetooth/br16_ccm_aes.a" />
+                    <Add option="../include_lib/cpu_lib_ac690x.a" />
+                    <Add option="../include_lib/common_lib.a" />
+                    <Add option="--end-group" />
+                    <Add option="../include_lib/dec/sbc_dec_lib_for_EngDect.a" />
+                    <Add option="../include_lib/bluetooth/bt_syn_lib.a" />
+                    <Add option="../include_lib/bluetooth/bt_tws_lib.a" />
+                    <Add option="../include_lib/bluetooth/crc_ibm_lib.a" />
+                    <Add option="../include_lib/usb/lib_usb_syn.a" />
+                    <Add option="../include_lib/dac/libLimiter.a" />
+                    <Add option="../include_lib/dac/libSOSIIR.a" />
+                    <Add option="../include_lib/dec/flac_dec_lib.a" />
+                    <Add option="../include_lib/dec/wav_dec_lib.a" />
+                    <Add option="../include_lib/dec/wma_dec_lib.a" />
+                    <Add option="../include_lib/dec/ape_dec_lib.a" />
+                    <Add option="../include_lib/dec/mp3_dec_lib.a" />
+                    <Add option="../include_lib/dec/sbc_dec_lib.a" />
+                    <Add option="../include_lib/dec/aac_dec_lib.a" />
+                    <Add option="../include_lib/echo/lib_audio_reverb_H.a" />
+                    <Add option="../include_lib/echo/lib_audio_howlingsupression.a" />
+                    <Add option="../include_lib/encode/lib_adpcm_encode.a" />
+                    <Add option="../include_lib/encode/lib_mp2_encode.a" />
+                    <Add option="../include_lib/encode/mp3_enc_lib.a" />
+                    <Add option="../include_lib/aec/lib_esco_repair.a" />
+                    <Add option="../include_lib/aec/lib_esco_sync.a" />
+                    <Add option="../include_lib/aec/libBtCalling.a" />
+                    <Add option="../include_lib/aec/libDAGC.a" />
+                    <Add option="../include_lib/aec/libSpeech_dection.a" />
+                    <Add option="../include_lib/rcsp_lib.a" />
+                    <Add option="../include_lib/font_lib.a" />
+                    <Add option="../include_lib/uicon_lib.a" />
+                </Linker>
+                <ExtraCommands>
+                    <Add after="download\ac690x\post_build\download_cbp.bat pi32_lto ac690x" />
+                    <Mode after="always" />
+                </ExtraCommands>
+            </Target>
+        </Build>
+        <Compiler>
+            <Add directory="./" />
+        </Compiler>
+        <Unit filename="music/music_ab_rpt.h" />
+        <Unit filename="music/music_decrypt.h" />
+        <Unit filename="include/record/rec_key.h" />
+        <Unit filename="include/record/rec_ui.h" />
+        <Unit filename="include/record/record.h" />
+        <Unit filename="include/music/music_key.h" />
+        <Unit filename="include/music/music_ui.h" />
+        <Unit filename="include/music/music_prompt.h" />
+        <Unit filename="include/music/lyrics_api.h" />
+        <Unit filename="include/music/music.h" />
+        <Unit filename="include/music/music_info.h" />
+        <Unit filename="include/idle/idle_key.h" />
+        <Unit filename="include/idle/idle.h" />
+        <Unit filename="include/rtc/rtc_ui.h" />
+        <Unit filename="include/rtc/rtc_key.h" />
+        <Unit filename="include/rtc/rtc_setting.h" />
+        <Unit filename="include/rtc/rtc.h" />
+        <Unit filename="include/echo/echo_prompt.h" />
+        <Unit filename="include/echo/echo_key.h" />
+        <Unit filename="include/echo/echo_api.h" />
+        <Unit filename="include/echo/echo_ui.h" />
+        <Unit filename="include/echo/echo.h" />
+        <Unit filename="include/common/pmu.h" />
+        <Unit filename="include/common/rcsp/light_head.h" />
+        <Unit filename="include/common/rcsp/light_control/light_fade.h" />
+        <Unit filename="include/common/rcsp/light_control/light_pwm.h" />
+        <Unit filename="include/common/rcsp/light_control/light_def.h" />
+        <Unit filename="include/common/rcsp/rcsp_head.h" />
+        <Unit filename="include/common/includes.h" />
+        <Unit filename="include/common/play_sel/play_sel.h" />
+        <Unit filename="include/cpu/ac690x/clock.h" />
+        <Unit filename="include/cpu/ac690x/update.h" />
+        <Unit filename="include/cpu/ac690x/key_drv/key_drv_ir.h" />
+        <Unit filename="include/cpu/ac690x/key_drv/key.h" />
+        <Unit filename="include/cpu/ac690x/key_drv/key_drv_io.h" />
+        <Unit filename="include/cpu/ac690x/key_drv/key_voice.h" />
+        <Unit filename="include/cpu/ac690x/key_drv/key_drv_ad.h" />
+        <Unit filename="include/cpu/ac690x/key_drv/key_drv_tch.h" />
+        <Unit filename="include/cpu/ac690x/ui/led/led7_drv.h" />
+        <Unit filename="include/cpu/ac690x/ui/led/led.h" />
+        <Unit filename="include/cpu/ac690x/ui/ui_common.h" />
+        <Unit filename="include/cpu/ac690x/ui/lcd/lcd_drv_api.h" />
+        <Unit filename="include/cpu/ac690x/ui/lcd/lcd_disp.h" />
+        <Unit filename="include/cpu/ac690x/ui/lcd/lcd128X64.h" />
+        <Unit filename="include/cpu/ac690x/ui/lcd/lcd_drv_interface.h" />
+        <Unit filename="include/cpu/ac690x/ui/lcd/lcd_spi.h" />
+        <Unit filename="include/cpu/ac690x/ui/lcd/lcd_ui_menu.h" />
+        <Unit filename="include/cpu/ac690x/ui/ui_api.h" />
+        <Unit filename="include/cpu/ac690x/sys_detect.h" />
+        <Unit filename="include/cpu/ac690x/dac/eq.h" />
+        <Unit filename="include/cpu/ac690x/dac/dac.h" />
+        <Unit filename="include/cpu/ac690x/dac/ladc.h" />
+        <Unit filename="include/linein/linein_prompt.h" />
+        <Unit filename="include/linein/linein_ui.h" />
+        <Unit filename="include/linein/linein_key.h" />
+        <Unit filename="include/linein/linein.h" />
+        <Unit filename="include/linein/dev_linein.h" />
+        <Unit filename="include/bluetooth/bt_ui.h" />
+        <Unit filename="include/bluetooth/bt_key_deal.h" />
+        <Unit filename="include/bluetooth/bt_key_msg.h" />
+        <Unit filename="include/bluetooth/le_profile_def.h" />
+        <Unit filename="include/bluetooth/le_server_module.h" />
+        <Unit filename="include/bluetooth/fcc_test.h" />
+        <Unit filename="include/fm/fm_inside/fm_inside.h" />
+        <Unit filename="include/fm/fm_api.h" />
+        <Unit filename="include/fm/qn8035/QN8035.h" />
+        <Unit filename="include/fm/fm_prompt.h" />
+        <Unit filename="include/fm/fm_ui.h" />
+        <Unit filename="include/fm/fm_radio.h" />
+        <Unit filename="include/fm/rda5807/RDA5807.h" />
+        <Unit filename="include/fm/bk1080/BK1080.h" />
+        <Unit filename="include/fm/fm_key.h" />
+        <Unit filename="include/sdk_cfg.h" />
+        <Unit filename="include/usb_device/dev_pc.h" />
+        <Unit filename="include/usb_device/usb_key.h" />
+        <Unit filename="include/usb_device/usb_device.h" />
+        <Unit filename="include/usb_device/pc_ui.h" />
+        <Unit filename="include/usb_device/pc_prompt.h" />
+        <Unit filename="include/main/main_key.h" />
+        <Unit filename="../include_lib/fat/tff.h" />
+        <Unit filename="../include_lib/fat/diskio.h" />
+        <Unit filename="../include_lib/fat/ff_api.h" />
+        <Unit filename="../include_lib/fat/ext_instructions.h" />
+        <Unit filename="../include_lib/fat/fs_io.h" />
+        <Unit filename="../include_lib/sydf/syd_file.h" />
+        <Unit filename="../include_lib/font/font_area_ctl.h" />
+        <Unit filename="../include_lib/font/font_OtherLanguage.h" />
+        <Unit filename="../include_lib/font/font_BIG5.h" />
+        <Unit filename="../include_lib/font/font_SJIS.h" />
+        <Unit filename="../include_lib/font/font_GBK.h" />
+        <Unit filename="../include_lib/font/font_KSC.h" />
+        <Unit filename="../include_lib/font/font_utf16toansi.h" />
+        <Unit filename="../include_lib/font/font_out.h" />
+        <Unit filename="../include_lib/font/font_lib.h" />
+        <Unit filename="../include_lib/font/font_all.h" />
+        <Unit filename="../include_lib/uicon/ui.h" />
+        <Unit filename="../include_lib/uicon/dc_showres.h" />
+        <Unit filename="../include_lib/uicon/lyrics.h" />
+        <Unit filename="../include_lib/uicon/gui_msg.h" />
+        <Unit filename="../include_lib/uicon/menu.h" />
+        <Unit filename="../include_lib/uicon/ui_con.h" />
+        <Unit filename="../include_lib/uicon/imb_module.h" />
+        <Unit filename="../include_lib/usb/mango_dev_usb_slave.h" />
+        <Unit filename="../include_lib/usb/usb_slave_api.h" />
+        <Unit filename="../include_lib/usb/mango_dev_usb.h" />
+        <Unit filename="../include_lib/mem/malloc.h" />
+        <Unit filename="../include_lib/aec/aec_api.h" />
+        <Unit filename="../include_lib/aec/AnalogAGC.h" />
+        <Unit filename="../include_lib/rtc/rtc_api.h" />
+        <Unit filename="../include_lib/echo/reverb_api.h" />
+        <Unit filename="../include_lib/echo/howlingsupression_api.h" />
+        <Unit filename="../include_lib/echo/echo_deal.h" />
+        <Unit filename="../include_lib/cbuf/circular_buf.h" />
+        <Unit filename="../include_lib/peripherals/winbond_flash.h" />
+        <Unit filename="../include_lib/common/include_sdk.h" />
+        <Unit filename="../include_lib/common/jiffies.h" />
+        <Unit filename="../include_lib/common/flash_cfg.h" />
+        <Unit filename="../include_lib/common/common.h" />
+        <Unit filename="../include_lib/common/ASCII_lib.h" />
+        <Unit filename="../include_lib/common/msg.h" />
+        <Unit filename="../include_lib/common/app_cfg.h" />
+        <Unit filename="../include_lib/common/printf.h" />
+        <Unit filename="../include_lib/common/fcvt.h" />
+        <Unit filename="../include_lib/common/error.h" />
+        <Unit filename="../include_lib/common/errno-base.h" />
+        <Unit filename="../include_lib/common/sys_timer.h" />
+        <Unit filename="../include_lib/common/list.h" />
+        <Unit filename="../include_lib/dec/music_api.h" />
+        <Unit filename="../include_lib/dec/decoder_phy.h" />
+        <Unit filename="../include_lib/dec/if_decoder_ctrl.h" />
+        <Unit filename="../include_lib/dec/sup_dec_op.h" />
+        <Unit filename="../include_lib/cpu/adc_api.h" />
+        <Unit filename="../include_lib/cpu/dac_param.h" />
+        <Unit filename="../include_lib/cpu/clock_api.h" />
+        <Unit filename="../include_lib/cpu/irq_api.h" />
+        <Unit filename="../include_lib/cpu/timer_api.h" />
+        <Unit filename="../include_lib/cpu/ac690x/mcpwm_api.h" />
+        <Unit filename="../include_lib/cpu/ac690x/iic.h" />
+        <Unit filename="../include_lib/cpu/ac690x/fm_inside_api.h" />
+        <Unit filename="../include_lib/cpu/ac690x/uart_param.h" />
+        <Unit filename="../include_lib/cpu/ac690x/typedef.h" />
+        <Unit filename="../include_lib/cpu/ac690x/timer.h" />
+        <Unit filename="../include_lib/cpu/ac690x/hw_cpu.h" />
+        <Unit filename="../include_lib/cpu/ac690x/cpu.h" />
+        <Unit filename="../include_lib/cpu/ac690x/clock_interface.h" />
+        <Unit filename="../include_lib/cpu/ac690x/iis.h" />
+        <Unit filename="../include_lib/cpu/ac690x/uart.h" />
+        <Unit filename="../include_lib/cpu/ac690x/icache_interface.h" />
+        <Unit filename="../include_lib/cpu/io_api.h" />
+        <Unit filename="../include_lib/cpu/crc_api.h" />
+        <Unit filename="../include_lib/cpu/timer_param.h" />
+        <Unit filename="../include_lib/cpu/uart_api.h" />
+        <Unit filename="../include_lib/cpu/io_param.h" />
+        <Unit filename="../include_lib/vm/vm.h" />
+        <Unit filename="../include_lib/vm/vm_api.h" />
+        <Unit filename="../include_lib/bluetooth/nfc_api.h" />
+        <Unit filename="../include_lib/bluetooth/avctp_user.h" />
+        <Unit filename="../include_lib/bluetooth/bluetooth_api.h" />
+        <Unit filename="../include_lib/rcsp/rcsp_interface.h" />
+        <Unit filename="../include_lib/file_operate/file_bs_deal.h" />
+        <Unit filename="../include_lib/file_operate/logic_dev_list.h" />
+        <Unit filename="../include_lib/file_operate/file_op.h" />
+        <Unit filename="../include_lib/file_operate/file_op_err.h" />
+        <Unit filename="../include_lib/file_operate/fs_io_h.h" />
+        <Unit filename="../include_lib/encode/encode.h" />
+        <Unit filename="../include_lib/encode/mp2_encode_api.h" />
+        <Unit filename="../include_lib/encode/dev_write_api.h" />
+        <Unit filename="../include_lib/encode/adpcm_encode_api.h" />
+        <Unit filename="../include_lib/encode/record.h" />
+        <Unit filename="../include_lib/asm_type.h" />
+        <Unit filename="../include_lib/dev_manage/dev_ctl.h" />
+        <Unit filename="../include_lib/dev_manage/drv_manage.h" />
+        <Unit filename="../include_lib/dev_manage/mango_dev_cache.h" />
+        <Unit filename="../include_lib/dev_manage/device_driver.h" />
+        <Unit filename="../include_lib/dev_manage/ioctl.h" />
+        <Unit filename="../include_lib/dac/src_api.h" />
+        <Unit filename="../include_lib/dac/SOS_IIR.h" />
+        <Unit filename="../include_lib/dac/eq_api.h" />
+        <Unit filename="../include_lib/dac/Limiter.h" />
+        <Unit filename="../include_lib/dac/dac_api.h" />
+        <Unit filename="../include_lib/dac/ladc_api.h" />
+        <Unit filename="../include_lib/rtos/os_cpu.h" />
+        <Unit filename="../include_lib/rtos/os_api.h" />
+        <Unit filename="../include_lib/rtos/os_cfg.h" />
+        <Unit filename="../include_lib/rtos/task_manage.h" />
+        <Unit filename="../include_lib/sdmmc/sd_host_api.h" />
+        <Unit filename="cpu/ac690x/version.S" />
+        <Unit filename="cpu/ac690x/board/board.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/uart/uart.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/sys_detect.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/clock.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/update.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/lcd/lcd128X64.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/lcd/lcd_disp.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/lcd/lcd_drv_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/lcd/lcd_drv_interface.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/lcd/lcd_spi.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/lcd/lcd_ui_menu.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/led/led7_drv.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/led/led.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/ui_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ui/ui_common.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/dac/dac.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/dac/eq.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/iic/iic.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/iis/iis.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/key_drv/key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/key_drv/key_drv_ad.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/key_drv/key_drv_io.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/key_drv/key_drv_ir.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/key_drv/key_drv_tch.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/key_drv/key_voice.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/ladc/ladc.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="cpu/ac690x/timer/timer.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/ASCII_lib.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/common.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/dev_manage/dev_ctl.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/file_operate/file_bs_deal.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/file_operate/file_operate.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/os_api/os_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/os_api/task_manage.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/play_sel/play_sel.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/vm/vm_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="echo/echo.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="echo/echo_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="echo/echo_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="echo/echo_prompt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="echo/echo_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_common.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_prompt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_radio.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/bk1080/Bk1080.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/fm_inside/fm_inside.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/qn8035/QN8035.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="fm/rda5807/RDA5807.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="idle/idle.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="idle/idle_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="linein/dev_linein.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="linein/linein.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="linein/linein_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="linein/linein_prompt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="linein/linein_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="main/main.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="main/main_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music_info.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music_prompt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music_decrypt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/music_ab_rpt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="music/lyrics_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="record/rec_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="record/rec_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="record/record.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="rtc/rtc.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="rtc/rtc_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="rtc/rtc_setting.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="rtc/rtc_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="usb_device/dev_pc.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="usb_device/pc_prompt.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="usb_device/pc_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="usb_device/usb_device.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="usb_device/usb_key.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/aec/aec_api.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/btstack/bt_configs_user.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/btstack/bt_key_deal.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/btstack/bt_key_msg.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/btstack/bt_ui.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/btstack/fcc_test.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/rcsp_event_deal.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/rcsp_task_msg_deal.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/rcsp_cbk_msg_deal.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/rcsp_protocol_deal.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/light_task.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/light_control/light_main.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/light_control/light_pwm.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="common/rcsp/light_control/light_fade.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Unit filename="bluetooth/btstack/le_server_module.c" >
+            <Option compilerVar="CC" />
+        </Unit>
+        <Extensions>
+            <code_completion />
+            <envvars />
+        </Extensions>
+    </Project>
+</CodeBlocks_project_file>

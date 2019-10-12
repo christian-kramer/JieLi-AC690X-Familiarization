@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="idle\idle.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3267" topLine="104" />
+		</Cursor>
+	</File>
+	<File name="common\rcsp\rcsp_task_msg_deal.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13241" topLine="646" />
+		</Cursor>
+	</File>
+	<File name="include\music\music_prompt.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="254" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="common\rcsp\light_control\light_main.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12558" topLine="471" />
+		</Cursor>
+	</File>
+	<File name="main\main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="17642" topLine="691" />
+		</Cursor>
+	</File>
+	<File name="music\music.c" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\ladc\ladc.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11301" topLine="378" />
+		</Cursor>
+	</File>
+	<File name="common\file_operate\file_operate.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6699" topLine="175" />
+		</Cursor>
+	</File>
+	<File name="common\vm\vm_api.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7884" topLine="254" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\sys_detect.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8203" topLine="305" />
+		</Cursor>
+	</File>
+	<File name="cpu\ac690x\ui\led\led.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5218" topLine="194" />
+		</Cursor>
+	</File>
+	<File name="..\include_lib\dac\dac_api.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3916" topLine="75" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

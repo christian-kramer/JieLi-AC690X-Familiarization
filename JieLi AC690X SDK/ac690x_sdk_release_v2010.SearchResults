@@ -1,0 +1,34 @@
+---- key_short_cnt Matches (33 in 5 files) ----
+Bt_key_deal.c (apps_soundbox\bluetooth\btstack):extern u8 key_short_cnt;
+Bt_key_deal.c (apps_soundbox\bluetooth\btstack):	key_short_cnt = 0;
+Fm_radio.c (apps_soundbox\fm):extern u8 key_short_cnt;
+Fm_radio.c (apps_soundbox\fm):	key_short_cnt= 0;
+Fm_radio.c (apps_soundbox\fm):			if(key_short_cnt == 1)
+Fm_radio.c (apps_soundbox\fm):				key_short_cnt = 2;
+Fm_radio.c (apps_soundbox\fm):			if(key_short_cnt == 3)
+Fm_radio.c (apps_soundbox\fm):				key_short_cnt = 0;
+Fm_radio.c (apps_soundbox\fm):			if(key_short_cnt == 2)
+Fm_radio.c (apps_soundbox\fm):				key_short_cnt = 3;
+Linein.c (apps_soundbox\linein):extern u8 key_short_cnt;
+Linein.c (apps_soundbox\linein):	key_short_cnt = 0;
+Linein.c (apps_soundbox\linein):				if(key_short_cnt == 1)
+Linein.c (apps_soundbox\linein):					key_short_cnt = 2;
+Linein.c (apps_soundbox\linein):				if(key_short_cnt == 3)
+Linein.c (apps_soundbox\linein):					key_short_cnt = 0;
+Linein.c (apps_soundbox\linein):				if(key_short_cnt == 2)
+Linein.c (apps_soundbox\linein):					key_short_cnt = 3;
+Main.c (apps_soundbox\main):u8 key_short_cnt=0;
+Main.c (apps_soundbox\main):				 if(key_short_cnt!=1)
+Main.c (apps_soundbox\main):				 	key_short_cnt = 1;
+Main.c (apps_soundbox\main):				 if(key_short_cnt!=1)
+Main.c (apps_soundbox\main):				 	key_short_cnt = 1;
+Music.c (apps_soundbox\music):extern u8 key_short_cnt;
+Music.c (apps_soundbox\music):	key_short_cnt=0;
+Music.c (apps_soundbox\music):			if(key_short_cnt==1)
+Music.c (apps_soundbox\music):				key_short_cnt=2;
+Music.c (apps_soundbox\music):			if(key_short_cnt == 3)
+Music.c (apps_soundbox\music):				key_short_cnt = 0;
+Music.c (apps_soundbox\music):			if(key_short_cnt == 2)
+Music.c (apps_soundbox\music):				key_short_cnt = 3;
+Music.c (apps_soundbox\music):		//	key_short_cnt = 1;
+Music.c (apps_soundbox\music):		//	key_short_cnt = 1;
