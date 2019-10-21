@@ -11,8 +11,8 @@ void clockOut(int value) {
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(7, OUTPUT);
-  pinMode(8, OUTPUT);
+  pinMode(CLOCK_PIN, OUTPUT);
+  pinMode(DATA_PIN, OUTPUT);
 }
 
 void loop() {
