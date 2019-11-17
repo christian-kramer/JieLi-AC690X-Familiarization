@@ -81,3 +81,25 @@ Interestingly enough, back in Jim's blog it showed up as `BR17`, not `BR21	`... 
 ![AC6905A Aliexpress](https://i.imgur.com/a4mnNdQ.png)
 
 On Aliexpress, they're $10 for 10 chips, plus shipping. Not bad, but I'm guessing in bulk they cost next to nothing.
+
+After a couple of weeks, they arrived!
+
+![Tube](https://i.imgur.com/Iw8mDH2.png)
+
+All 10 came in a tube with tape at the end. Pretty much the same thing I got my STM32F030F4P6s in. I also ordered a QSOP-24 breakout board from ebay to breadboard these things.
+
+![QSOP-24 Breakout](https://i.ebayimg.com/images/g/MF4AAOSwd49bz9BE/s-l500.jpg)
+
+But... I didn't have a solder stencil for this footprint, so I'd have to be *extremely* careful with soldering. Furthermore, I only ordered 1 breakout board! That meant I only had 1 shot to get it right.
+
+After about 20 minutes of delicate maneuvering and deliberately-placed solder paste, I had what appeared to be a successful operation!
+
+![AC6905 on QSOP-24 Board](https://i.imgur.com/vHvKAHc.jpg?1)
+
+Pins 21 and 22 did appear to give me trouble at one point, though. While I was checking each pin to make sure it didn't bridge with its neighbor, these two indicated they  had a dead short between them. But, of course, I didn't see any bridge, so I thought "maybe these are shorted together within the chip die."
+
+So, I took a second chip out of the tube, and sure enough! My multimeter detected a dead short between pins 21 and 22 on a bare, unaltered chip.
+
+![AC6905 Pinout](https://i.imgur.com/GGRctX2.jpg)
+
+According to a diagram I found during my forum-hopping, pins 21 and 22 are the antenna and one analog signal ground. While my current grasp of analog RF circuitry is limited, I suppose it's reasonable to assume the impedance between the antenna input and ground is quite low.
