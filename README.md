@@ -103,3 +103,20 @@ So, I took a second chip out of the tube, and sure enough! My multimeter detecte
 ![AC6905 Pinout](https://i.imgur.com/GGRctX2.jpg)
 
 According to a diagram I found during my forum-hopping, pins 21 and 22 are the antenna and one analog signal ground. While my current grasp of analog RF circuitry is limited, I suppose it's reasonable to assume the impedance between the antenna input and ground is quite low.
+
+
+Alright, now we need to see if we can get this thing to talk. After discussing with one of the forum users, I arrived at this minimal configuration for the AC6905A to boot up.
+
+![Minimal](https://i.imgur.com/jvmTgaI.png)
+
+And then, after agreeing, I built it on a breadboard. I didn't have a 24MHz crystal lying around, so I used a 26MHz instead. I didn't need a radio yet, so I hoped this would be close enough for USB at least.
+
+![Minimal breadboard](https://i.imgur.com/NRBpYGJ.jpg?1)
+
+To my surprise, it booted up first try! It even appeared in Device Manager as "BR17 UBOOT2.00 USB Device" without requiring my Arduino programmer.
+
+![BR17 UBOOT2.00 USB Device](https://i.imgur.com/X9sYwAF.png)
+
+In hindsight, this makes sense, since it's a blank chip and has no "main" program to load into.
+
+Unfortunately, I still had issues getting the chip to let me upload firmware.
