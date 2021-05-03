@@ -60,7 +60,7 @@ Now, I've never seen anything like this before, so I knew I probably wouldn't be
 
 Fortunately, the same guy that posted pictures of his programmer had taken a logic analyzer to the socket, and discovered that it's really doing some pretty simple stuff to put these chips into "programming mode".
 
-![Logic Analyzer Output](https://radioskot.ru/_fr/142/s8684165.jpg)
+![Logic Analyzer Output](https://radioskot.ru/_fr/142/8684165.png)
 
 A very simple clock-and-data signal across the USB pins of the AC6905a are apparently all that's needed. I downloaded the file included in the post to look at the output for myself, and ordered up an Arduino to attempt to replicate this simple repeating signal.
 
